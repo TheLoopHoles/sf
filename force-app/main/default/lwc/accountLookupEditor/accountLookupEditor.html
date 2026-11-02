@@ -1,0 +1,13 @@
+<template>
+    <lightning-card
+        title="Account Lookup">
+            <div class="slds-p-around_medium">
+                <lightning-record-picker
+                    label="Search Account"
+                    placeholder="Search by account name. . ."
+                    object-api-name="Account"
+                    onchange={handleAccountSelect}>
+                </lightning-record-picker>
+            </div>
+    </lightning-card>
+</template>

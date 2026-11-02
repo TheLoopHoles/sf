@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title="Static Message Display" icon-name="utility:chat">
+        <div class="card-body">
+            <lightning-input
+                type="text"
+                label="Enter your text"
+                placeholder="Type something..."
+                value={inputText}
+                onchange={handleInputChange}
+            ></lightning-input>
+
+            <template lwc:if={hasMessage}>
+                <div class={messageBoxClass} ontransitionend={handleTransitionEnd}>
+                    <p class="message-label">Message</p>
+                    <p class="message-text">{displayMessage}</p>
+                </div>
+            </template>
+
+            <template lwc:else>
+                <div class="placeholder-box">
+                    <p class="placeholder-text">Enter text above to see your message.</p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

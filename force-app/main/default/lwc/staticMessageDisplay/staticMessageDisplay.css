@@ -1,0 +1,60 @@
+.card-body {
+    padding: var(--slds-g-spacing-4, 1rem);
+}
+
+.message-box {
+    border-radius: var(--slds-g-radius-border-2, 0.5rem);
+    padding: var(--slds-g-spacing-4, 1rem);
+    background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 100%);
+    border: var(--slds-g-sizing-border-1, 1px) solid var(--slds-g-color-brand-base-80, #a5b4fc);
+    margin-top: var(--slds-g-spacing-4, 1rem);
+    animation: fadeSlideIn 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.message-label {
+    font-size: var(--slds-g-font-scale-neg-1, 0.6875rem);
+    font-weight: var(--slds-g-font-weight-7, 700);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--slds-g-color-accent-1, #6366f1);
+    margin: 0 0 var(--slds-g-spacing-2, 0.25rem);
+}
+
+.message-text {
+    font-size: var(--slds-g-font-scale-4, 1rem);
+    font-weight: var(--slds-g-font-weight-6, 600);
+    color: var(--slds-g-color-accent-dark-2, #1e1b4b);
+    margin: 0;
+}
+
+.placeholder-box {
+    border-radius: var(--slds-g-radius-border-2, 0.5rem);
+    padding: var(--slds-g-spacing-4, 1rem);
+    background: var(--slds-g-color-surface-1, #f8fafc);
+    border: var(--slds-g-sizing-border-1, 1px) dashed var(--slds-g-color-border-1, #cbd5e1);
+    margin-top: var(--slds-g-spacing-4, 1rem);
+}
+
+.placeholder-text {
+    color: var(--slds-g-color-neutral-base-65, #94a3b8);
+    font-style: italic;
+    font-size: var(--slds-g-font-scale-2, 0.875rem);
+    margin: 0;
+}
+
+.message-box.flash-active {
+    background: linear-gradient(135deg, #fef9c3 0%, #fde68a 100%);
+    box-shadow: 0 0 16px rgba(251, 191, 36, 0.45);
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
